@@ -4,11 +4,10 @@ import java.util.List;
 
 public class Path {
     private Sections sections;
-    private List<FarePolicy> farePolicies;
+    private FarePolicy farePolicy = new DistanceFarePolicy(new BasicDistanceFareFormula());
 
-    public Path(Sections sections, FarePolicy... farePolicy) {
+    public Path(Sections sections) {
         this.sections = sections;
-        this.farePolicies = List.of(farePolicy);
     }
 
     public Sections getSections() {
@@ -28,17 +27,6 @@ public class Path {
     }
 
     public int calculateFare() {
-        validateFarePolicies();
-        int baseFare = 0;
-        for (FarePolicy farePolicy : farePolicies) {
-            baseFare = farePolicy.apply(this, baseFare);
-        }
-        return baseFare;
-    }
-
-    private void validateFarePolicies() {
-        if (farePolicies.isEmpty()) {
-            throw new IllegalArgumentException("요금 정책이 설정되지 않았습니다.");
-        }
+        return farePolicy.apply(extractDistance());
     }
 }
