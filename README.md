@@ -3,8 +3,8 @@
 
 # 리뷰
 
-### [🚀 3단계 - 요금 정책 추가](https://github.com/next-step/atdd-subway-fare/pull/323)
+### [🚀 1단계 - 경로 조회 타입 추가](https://github.com/next-step/atdd-subway-fare/pull/288)
 
 ### [🚀 2단계 - 요금 조회](https://github.com/next-step/atdd-subway-fare/pull/312)
 
-### [🚀 1단계 - 경로 조회 타입 추가](https://github.com/next-step/atdd-subway-fare/pull/288)
+### [🚀 3단계 - 요금 정책 추가](https://github.com/next-step/atdd-subway-fare/pull/323)
